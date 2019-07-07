@@ -1,0 +1,355 @@
+.timeline {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  opacity: 1;
+  width: 99%;
+  transition: 1s;
+  padding: 5px;
+}
+.timeline-item {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+  color: hsl(0, 0%, 20%);
+  text-align: left;
+  flex-basis: 100%;
+  border-radius: 3px 15px 15px 3px;
+  line-height: 30px;
+  transition: 1s;
+  padding-left: 15px;
+}
+.timeline-item-2013 {
+  background: linear-gradient(90deg, hsl(349, 69%, 80%), hsl(349, 69%, 49%));
+}
+.timeline-item-2014 {
+  background: linear-gradient(90deg, hsl(14, 87%, 80%), hsl(14, 87%, 52%));
+}
+.timeline-item-2015 {
+  background: linear-gradient(90deg, hsl(35, 86%, 85%), hsl(35, 86%, 54%));
+}
+.timeline-item-2016 {
+  background: linear-gradient(90deg, hsl(82, 53%, 85%), hsl(82, 53%, 58%));
+}
+.timeline-item-2017 {
+  background: linear-gradient(90deg, hsl(166, 77%, 80%), hsl(166, 77%, 45%));
+}
+.timeline-item-2018 {
+  background: linear-gradient(90deg, hsl(146, 58%, 80%), hsl(146, 58%, 43%));
+}
+/* .timeline-item-2020 {
+  background: linear-gradient(90deg, hsl(201, 78%, 80%), hsl(201, 78%, 55%));
+} */
+
+.impress-on-title .timeline {
+  opacity: 1;
+}
+
+[class*='impress-on-y2013'] .timeline-item-2014,
+[class*='impress-on-y2013'] .timeline-item-2015,
+[class*='impress-on-y2013'] .timeline-item-2016,
+[class*='impress-on-y2013'] .timeline-item-2017,
+[class*='impress-on-y2013'] .timeline-item-2018 {
+  flex-basis: 0%;
+  font-size: 0px;
+  padding: 0px;
+}
+[class*='impress-on-y2014'] .timeline-item-2013,
+[class*='impress-on-y2014'] .timeline-item-2015,
+[class*='impress-on-y2014'] .timeline-item-2016,
+[class*='impress-on-y2014'] .timeline-item-2017,
+[class*='impress-on-y2014'] .timeline-item-2018 {
+  flex-basis: 0%;
+  font-size: 0px;
+  padding: 0px;
+}
+[class*='impress-on-y2015'] .timeline-item-2013,
+[class*='impress-on-y2015'] .timeline-item-2014,
+[class*='impress-on-y2015'] .timeline-item-2016,
+[class*='impress-on-y2015'] .timeline-item-2017,
+[class*='impress-on-y2015'] .timeline-item-2018 {
+  flex-basis: 0%;
+  font-size: 0px;
+  padding: 0px;
+}
+[class*='impress-on-y2016'] .timeline-item-2013,
+[class*='impress-on-y2016'] .timeline-item-2014,
+[class*='impress-on-y2016'] .timeline-item-2015,
+[class*='impress-on-y2016'] .timeline-item-2017,
+[class*='impress-on-y2016'] .timeline-item-2018 {
+  flex-basis: 0%;
+  font-size: 0px;
+  padding: 0px;
+}
+[class*='impress-on-y2017'] .timeline-item-2013,
+[class*='impress-on-y2017'] .timeline-item-2014,
+[class*='impress-on-y2017'] .timeline-item-2015,
+[class*='impress-on-y2017'] .timeline-item-2016,
+[class*='impress-on-y2017'] .timeline-item-2018 {
+  flex-basis: 0%;
+  font-size: 0px;
+  padding: 0px;
+}
+[class*='impress-on-y2018'] .timeline-item-2013,
+[class*='impress-on-y2018'] .timeline-item-2014,
+[class*='impress-on-y2018'] .timeline-item-2015,
+[class*='impress-on-y2018'] .timeline-item-2016,
+[class*='impress-on-y2018'] .timeline-item-2017 {
+  flex-basis: 0%;
+  font-size: 0px;
+  padding: 0px;
+}
+
+.year-ticks {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  width: 99%;
+  padding: 5px;
+}
+.year-ticks-item {
+  font-size: 0px;
+  flex-basis: 100%;
+  opacity: 0;
+  transition: 1s;
+}
+[class*='impress-on-y2013'] .timeline-item-2013 .year-ticks-item {
+  font-size: 15px;
+  opacity: 1;
+}
+[class*='impress-on-y2014'] .timeline-item-2014 .year-ticks-item {
+  font-size: 15px;
+  opacity: 1;
+}
+[class*='impress-on-y2015'] .timeline-item-2015 .year-ticks-item {
+  font-size: 15px;
+  opacity: 1;
+}
+[class*='impress-on-y2016'] .timeline-item-2016 .year-ticks-item {
+  font-size: 15px;
+  opacity: 1;
+}
+[class*='impress-on-y2017'] .timeline-item-2017 .year-ticks-item {
+  font-size: 15px;
+  opacity: 1;
+}
+[class*='impress-on-y2018'] .timeline-item-2018 .year-ticks-item {
+  font-size: 15px;
+  opacity: 1;
+}
+
+.month-pointer {
+  position: absolute;
+  z-index: 100;
+  left: calc((100% / 60) * 0 + 25px);
+  bottom: 35px;
+  border-top: 10px solid hsl(0, 100%, 50%);
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  transition: 1.3s;
+}
+
+@font-face {
+  font-family: 'IBM-3270';
+  src: local('IBM 3270'), url('3270Medium.woff') format('woff');
+}
+
+.cr-logo {
+  text-align: center;
+}
+.cr-logo img {
+  max-height: 400px;
+}
+.cr-logo span {
+  font-family: 'IBM-3270', sans-serif;
+}
+.cr-logo div {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+.cr-descr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cr-descr img {
+  height: auto;
+  max-height: 100%;
+  max-width: 45%;
+}
+.cr-descr .descr-text {
+  float: right;
+  width: 50%;
+}
+.cr-descr .descr-text h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.cr-descr li:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #326de6;
+  border-radius: 50%;
+  position: relative;
+  top: -7px;
+  margin-right: 7px;
+}
+.cr-descr li {
+  margin-bottom: 10px;
+}
+.impress-on-overview .step.cr-descr {
+  opacity: 0;
+}
+.impress-enabled .step.cr-descr {
+  opacity: 0;
+}
+.impress-enabled .step.cr-descr.active {
+  opacity: 1;
+}
+
+.impress-on-y2013-docker .month-pointer {
+  left: calc((100% / 12) * 2 + 25px);
+}
+.impress-on-y2013-docker-descr .month-pointer {
+  left: calc((100% / 12) * 2 + 25px);
+}
+.impress-on-y2014-rkt .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2014-rkt-descr .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2015-windows .month-pointer {
+  left: calc((100% / 12) * 4 + 25px);
+}
+.impress-on-y2015-windows-descr .month-pointer {
+  left: calc((100% / 12) * 4 + 25px);
+}
+.impress-on-y2015-runc .month-pointer {
+  left: calc((100% / 12) * 6 + 25px);
+}
+.impress-on-y2015-runc-descr .month-pointer {
+  left: calc((100% / 12) * 6 + 25px);
+}
+.impress-on-y2015-cc .month-pointer {
+  left: calc((100% / 12) * 5 + 25px);
+}
+.impress-on-y2015-cc-descr .month-pointer {
+  left: calc((100% / 12) * 5 + 25px);
+}
+.impress-on-y2015-runv .month-pointer {
+  left: calc((100% / 12) * 5 + 25px);
+}
+.impress-on-y2015-runv-descr .month-pointer {
+  left: calc((100% / 12) * 5 + 25px);
+}
+.impress-on-y2015-containerd .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2015-containerd-descr .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2016-singularity .month-pointer {
+  left: calc((100% / 12) * 4 + 25px);
+}
+.impress-on-y2016-singularity-descr .month-pointer {
+  left: calc((100% / 12) * 4 + 25px);
+}
+.impress-on-y2016-cri .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2016-cri-descr .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2016-crio .month-pointer {
+  left: calc((100% / 12) * 9 + 25px);
+}
+.impress-on-y2016-crio-descr .month-pointer {
+  left: calc((100% / 12) * 9 + 25px);
+}
+.impress-on-y2016-rktlet .month-pointer {
+  left: calc((100% / 12) * 9 + 25px);
+}
+.impress-on-y2016-rktlet-descr .month-pointer {
+  left: calc((100% / 12) * 9 + 25px);
+}
+.impress-on-y2016-frakti .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2016-frakti-descr .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2017-moby .month-pointer {
+  left: calc((100% / 12) * 4 + 25px);
+}
+.impress-on-y2017-moby-descr .month-pointer {
+  left: calc((100% / 12) * 4 + 25px);
+}
+.impress-on-y2017-railcar .month-pointer {
+  left: calc((100% / 12) * 6 + 25px);
+}
+.impress-on-y2017-railcar-descr .month-pointer {
+  left: calc((100% / 12) * 6 + 25px);
+}
+.impress-on-y2017-virtlet .month-pointer {
+  left: calc((100% / 12) * 6 + 25px);
+}
+.impress-on-y2017-virtlet-descr .month-pointer {
+  left: calc((100% / 12) * 6 + 25px);
+}
+.impress-on-y2017-cri-containerd .month-pointer {
+  left: calc((100% / 12) * 9 + 25px);
+}
+.impress-on-y2017-cri-containerd-descr .month-pointer {
+  left: calc((100% / 12) * 9 + 25px);
+}
+.impress-on-y2017-kata .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2017-kata-descr .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2017-runhcs .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2017-runhcs-descr .month-pointer {
+  left: calc((100% / 12) * 11 + 25px);
+}
+.impress-on-y2018-containerd .month-pointer {
+  left: calc((100% / 12) * 3 + 25px);
+}
+.impress-on-y2018-containerd-descr .month-pointer {
+  left: calc((100% / 12) * 3 + 25px);
+}
+.impress-on-y2018-gvisor .month-pointer {
+  left: calc((100% / 12) * 5 + 25px);
+}
+.impress-on-y2018-gvisor-descr .month-pointer {
+  left: calc((100% / 12) * 5 + 25px);
+}
+.impress-on-y2018-nabla .month-pointer {
+  left: calc((100% / 12) * 7 + 25px);
+}
+.impress-on-y2018-nabla-descr .month-pointer {
+  left: calc((100% / 12) * 7 + 25px);
+}
+
+#y2018-end h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+#y2018-end li {
+  margin-bottom: 15px;
+}
